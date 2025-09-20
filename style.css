@@ -465,6 +465,8 @@ body {
 
     .aboutme, .experience, .skills, .form-contact {
         width: 90%;
+        align-items: center;
+        text-align: center;
     }
 
     .nama {
