@@ -23,6 +23,7 @@
                     </ul>
                 </nav>
             </div>
+            <div class="menu-toggle">&#9776;</div>
         </div>
     </header>
     <div class="container">
@@ -183,5 +184,19 @@
             </div>
         </div>
     </div>
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.navlinks');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navlinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
