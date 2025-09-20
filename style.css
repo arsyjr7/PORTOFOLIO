@@ -1,0 +1,426 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1c1c1c;
+    background-image: linear-gradient(315deg, #000000 20%, #3b3b3b 90%);
+    margin: 0;
+}
+
+/* BAGIAN NAVBAR */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    background-image: linear-gradient(315deg, #ffffff 0%, #cdcdcd 74%);
+    height: 80px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo h1 {
+    color: #000000;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.navlinks {
+    display: flex;
+    list-style: none;
+}
+
+.navlinks li {
+    color: #fff;
+    text-decoration: none;
+    display: inline;
+    padding-right: 40px;
+    margin: 0;
+}
+
+.navlinks li a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+/* BAGIAN NAMA + FOTO */
+.container {
+    justify-items: center;
+}
+.nama-foto {
+    margin-top: 120px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    text-align: center;
+    flex-direction: column;
+}
+.foto {
+    position: absolute;
+}
+
+.foto img {
+    width: 200px;
+    border-radius: 15%;
+    position: relative;
+    bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+.nama {
+    font-weight: bolder;
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nama span {
+    font-size: 100px;
+    margin: 0;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.btn-cv {
+    width: 150px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-cv a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* BAGIAN FRONTEND BERGERAK */
+.frontend {
+    margin-top: 50px;
+    display: flex;  
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #cdcdcd 0%, #cdcdcd 60%);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.frontend marquee {
+    padding: 20px 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* BAGIAN ABOUT ME */
+.aboutme {
+    width: 60%;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.aboutme h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.aboutme p {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* BAGIAN EXPERIENCE */
+.experience {
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    padding-top: 30px;
+    color: #fff;
+}
+
+.marquee-experience {
+    display: flex;
+    gap: 40px; /* jarak antar track */
+}
+
+.track-experience {
+    display: flex;
+    gap: 40px; /* jarak antar card */
+    animation: scroll 40s linear infinite;
+}
+
+.experience-content {
+    background: #393939;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    min-width: 280px;
+    transition: background-color 0.3s ease;
+
+}
+
+.experience-content:hover {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.experience-content:hover .judul,
+.experience-content:hover .tanggal {
+    color: #000; /* warna teks jadi hitam */
+    transition: color 0.3s ease;
+}
+
+.judul {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 0 0;
+}
+
+.tanggal {
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+}
+
+/* Animasi marquee */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* BAGIAN SKILLS */
+.skills-title {
+  margin: 0;
+}
+.skills {
+  width: 60%;
+  margin-top: 50px;
+  color: #fff;
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card tiap skill */
+.skill {
+  background: #393939;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  background: #ffffff;
+  transform: translateY(-5px);
+}
+
+.skill h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.skill:hover h3 {
+  color: #000;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Target width tiap skill */
+.skill:hover .progress {
+  width: var(--target);
+}
+
+/* Warna progress bar untuk tiap skill */
+/* Urutannya: skill pertama = HTML */
+.skill:nth-of-type(1) .progress {
+  background: linear-gradient(90deg, #ff5722, #ff9800); /* HTML */
+}
+.skill:nth-of-type(2) .progress {
+  background: linear-gradient(90deg, #2196f3, #03a9f4); /* CSS */
+}
+.skill:nth-of-type(3) .progress {
+  background: linear-gradient(90deg, #fbc02d, #ffeb3b); /* JavaScript */
+}
+.skill:nth-of-type(4) .progress {
+  background: linear-gradient(90deg, #61dafb, #2196f3); /* React */
+}
+.skill:nth-of-type(5) .progress {
+  background: linear-gradient(90deg, #4caf50, #8bc34a); /* Node.js */
+}
+
+/* Progress text */
+.progress-text {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  transition: color 0.3s ease;
+  z-index: 3;
+}
+
+/* Sesudah hover → teks hitam */
+.skill:hover .progress-text {
+  color: #ffffff;
+}
+
+
+/* BAGIAN CONTACT ME */
+.contact {
+    width: 60%;
+    margin: 50px 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.contact p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+ 
+.form-contact {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #474747;
+}
+
+
+.contact-methods a {
+    margin: 0 15px;
+    font-size: 30px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ff9800;
+}
