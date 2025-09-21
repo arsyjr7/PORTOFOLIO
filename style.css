@@ -470,7 +470,7 @@ body {
     }
 
     .aboutme, .experience, .skills, .form-contact {
-        width: 100%;
+        width: 90%;
         align-items: center;
         text-align: center;
     }
