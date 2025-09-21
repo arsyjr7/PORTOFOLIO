@@ -469,7 +469,7 @@ body {
         display: flex;
     }
 
-    .aboutme, .experience, .skills, .contact-form {
+    .aboutme, .experience, .skills, .contact {
         width: 90%;
         align-items: center;
         text-align: center;
