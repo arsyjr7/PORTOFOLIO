@@ -469,7 +469,7 @@ body {
         display: flex;
     }
 
-    .aboutme, .experience, .skills, .form-contact {
+    .aboutme, .experience, .skills, .contact-form {
         width: 90%;
         align-items: center;
         text-align: center;
@@ -477,11 +477,6 @@ body {
 
     .contact-title {
         font-size: 30px;
-    }
-
-    .contact-form {
-        width: 100%;
-        padding: 20px;
     }
 
     .nama {
