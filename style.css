@@ -475,6 +475,15 @@ body {
         text-align: center;
     }
 
+    .contact-title {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 20px;
+    }
+
     .nama {
         font-size: 50px;
     }
